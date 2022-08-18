@@ -1,0 +1,17 @@
+<ion-header class="bar bar-header bar-dark">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{parentCategoryName}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="card-background-page">
+  <ion-card *ngFor="let category of this.categories" (click)="openCategory(category)">
+    <img src="{{category.ImageUrl}}"/>
+    <div class="card-title">{{category.Name}}</div>
+    <div class="card-subtitle">{{category.ProductCount}} Çeşit</div>
+  </ion-card>
+</ion-content>
